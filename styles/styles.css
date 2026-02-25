@@ -1,0 +1,65 @@
+/* =========================================
+   1. IMPORTACIÓN DE FUENTES
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@400;700&family=JetBrains+Mono:wght@500&display=swap');
+
+/* =========================================
+   2. VARIABLES DEL SISTEMA (DESIGN TOKENS)
+   ========================================= */
+:root {
+    /* Colores */
+    --color-fondo: #0B0E14;
+    --color-acento: #00D4FF;
+    --color-acento-glow: rgba(0, 212, 255, 0.3);
+    --color-superficie: #1E2530;
+    --texto-principal: #F0F4F8;
+    --texto-secundario: #8A99AD;
+
+    /* Tipografía */
+    --fuente-titulos: 'Michroma', sans-serif;
+    --fuente-cuerpo: 'Inter', sans-serif;
+    --fuente-mono: 'JetBrains Mono', monospace;
+
+    /* Espaciado y Bordes */
+    --gap-seccion: 4rem;
+    --radio-border: 8px;
+    --transition-fast: 0.3s ease;
+}
+
+/* =========================================
+   3. RESET Y ESTILOS BASE
+   ========================================= */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--texto-principal);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scrolls horizontales accidentales */
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
