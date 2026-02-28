@@ -9,7 +9,7 @@
 :root {
     /* Colores */
     --color-fondo: #0B0E14;
-    --color-acento: #00D4FF;
+    --color-acento: #fb2c36;
     --color-acento-glow: rgba(0, 212, 255, 0.3);
     --color-superficie: #1E2530;
     --texto-principal: #F0F4F8;
@@ -59,7 +59,167 @@ a {
     transition: var(--transition-fast);
 }
 
+li{
+    list-style: none;
+    display: inline-block;
+}
+
 img {
     max-width: 100%;
     display: block;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*Estilos del Hero Section*/
+
+.header{
+    background-image: url(../images/moto-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+
+    position: relative;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7)
+}
+
+.header .header-section, .container-slogan, .btns-hero, .hero-caracteristicas, .container-nav-desktop{
+    position: relative;
+    z-index: 2;
+}
+
+.header .header-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.header-section h1{
+    display: flex;
+    font-size: 1rem;
+    gap: 8px;
+}
+
+.header-section h1 span{
+    font-size: 12px;
+    color: var(--color-acento);
+}
+
+.header-section .btn-menu-icon i{
+    font-size: 30px;
+}
+
+.container-nav-desktop{
+    display: none;
+}
+
+.container-slogan{
+    max-width: 560px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container-slogan h2{
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: var(--texto-principal);
+}
+
+.container-slogan p{
+    font-size: 1.2rem;
+    color: var(--texto-secundario);
+    margin-bottom: 3rem;
+}
+
+.btns-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.btns-hero .btn-reserva, .btn-especificaciones{
+    padding: 15px;
+    color: var(--texto-principal);
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+}
+
+.btns-hero .btn-reserva{
+    background-color: var(--color-acento);
+}
+
+.btns-hero .btn-especificaciones{
+    background-color: transparent;
+    border: 2px solid var(--color-acento);
+    transition: all 0.5s;
+} 
+
+.btns-hero .btn-especificaciones:hover{
+    background-color: var(--color-fondo);
+}
+.hero-caracteristicas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.hero-caracteristicas .hp, .km, .kg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-caracteristicas .hp, .km{
+    border-right: 2px solid;
+    padding-right: 10px;
+} 
+
+/*VERSION TABLET*/
+
+@media(min-width: 650px){
+    .btns-hero{
+        flex-direction: row;
+        justify-content: center;
+    }   
+}
+
+/*VERSION DESKTOP*/
+
+@media(min-width: 750px){
+    .header .btn-menu-icon{
+        display: none;
+    } 
+
+    .container-nav-desktop{
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .container-nav-desktop li a{
+        font-size: 1.2rem;
+        color: var(--texto-secundario);
+        gap: 10px;
+        transition: all 0.5s;
+    }
+
+    .container-nav-desktop li a:hover{
+        color: var(--texto-principal);
+    }
 }
