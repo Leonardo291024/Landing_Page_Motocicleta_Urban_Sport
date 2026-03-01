@@ -312,6 +312,58 @@ main .desc-especificaciones{
     max-width: 560px;
 }
 
+.section-experiencia{
+    background-color: var(--color-fondo);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.section-experiencia .experiencia p:nth-child(1){
+    color: var(--color-acento);
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+.section-experiencia .experiencia h2{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 340px;
+}
+
+.section-experiencia .experiencia p:nth-child(3){
+    color: var(--texto-secundario);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.check-caracteristicas li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+.check-caracteristicas li svg{
+    color: var(--color-acento)
+}
+
+.buton-asegura button{
+    background-color: var(--color-acento);
+    color: var(--texto-principal);
+    border: none;
+    padding: 8px;
+    height: 50px;
+    width: 260px;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.motorcycle-action{
+    margin-top: 50px;
+}
+
 /*VERSION TABLET*/
 
 @media(min-width: 650px){
@@ -336,6 +388,11 @@ main .desc-especificaciones{
 
     .motor-background{
         height: 80vh;
+    }
+
+    .section-experiencia{
+        display: flex;
+        align-items: center;
     }
 
 }
